@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = 2001
-const Dress = require('./models/Product')
+const Dress = require('./models/Dress')
 const mongoose = require('mongoose')
 
 //===============connection to Database==========
@@ -29,20 +29,11 @@ app.use((req,res,next)=>{
     next()
 })
 //====================routes===================
-// first page shpwing products images
-app.get('/:id', (req,res)=>{
-    Dress.findById(req.params.id,(err,imgDress)=>{
-        console.log(req.params.id)
-        res.render('First',{dress:imgDress})
-
-    })
-})
-
 
 // Index
 app.get('/dresses',(req,res)=>{
    // query model to return all fruits
-   
+
    Dress.find({},(err,allDresses)=>{
 res.render('Index',{dresses:allDresses})
 console.log(req.body)  
@@ -73,4 +64,4 @@ app.post('/dresses',(req,res)=>{ //MongoServerError: bad auth : Authentication f
 
 app.listen(port,()=>{
     console.log('listen to 3000')
-})
+}) 

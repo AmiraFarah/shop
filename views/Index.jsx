@@ -9,13 +9,13 @@ const React =require('react')
                 <nav>
                     <a href ="/dresses/new">add new</a>
                 </nav>
-<h1> Dresses Index Page</h1>  
+<h1> Products Index Page</h1>  
 <ul>
     {
         dresses.map(dress=>{
             return (
 <li>
-   <p>Its a  <a href={`/dresses/${dress._id}`}>{dress.name}</a> dress , color is {dress.color} , Style is {dress.style}</p> 
+     <a href={`/dresses/${dress._id}`}><img src={dress.imag} height="300" width="300"></img></a>
 
 </li>
             )
@@ -25,4 +25,4 @@ const React =require('react')
         )
  }
  }
- module.exports = Index
+ module.exports = Index 

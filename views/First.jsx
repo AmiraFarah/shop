@@ -9,7 +9,7 @@ class First extends React.Component {
                  <h1> Products Page</h1>     
                 <ul>
                     <li>
-                        <a href='/dresses/:id'><img src={dress.imag} height="300" width="300"></img></a>
+                        <a href='/dresses/new'><img src={dress.imag} height="300" width="300"></img></a>
             
                     </li>
                 </ul>
