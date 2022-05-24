@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = 2001
-const Dress = require('./models/Dress')
+const Dress = require('./models/Product')
 const mongoose = require('mongoose')
 
 //===============connection to Database==========
@@ -29,6 +29,15 @@ app.use((req,res,next)=>{
     next()
 })
 //====================routes===================
+// first page shpwing products images
+app.get('/:id', (req,res)=>{
+    Dress.findById(req.params.id,(err,imgDress)=>{
+        console.log(req.params.id)
+        res.render('First',{dress:imgDress})
+
+    })
+})
+
 
 // Index
 app.get('/dresses',(req,res)=>{
