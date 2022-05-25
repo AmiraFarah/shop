@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = 2001
-const Dress = require('./models/Dress')
+const Product = require('./models/Product')
 const mongoose = require('mongoose')
 
 //===============connection to Database==========
@@ -34,9 +34,8 @@ app.use((req,res,next)=>{
 app.get('/dresses',(req,res)=>{
    // query model to return all fruits
 
-   Dress.find({},(err,allDresses)=>{
+   Product.find({},(err,allDresses)=>{
 res.render('Index',{dresses:allDresses})
-console.log(req.body)  
 })
 })
 
@@ -46,7 +45,7 @@ app.get('/dresses/new',(req,res)=>{
 })
 // Show the element details 
 app.get('/dresses/:id', (req,res)=>{
-    Dress.findById(req.params.id,(err,foundDress)=>{
+    Product.findById(req.params.id,(err,foundDress)=>{
         res.render('Show',{dress:foundDress})
 
     })
@@ -55,13 +54,20 @@ app.get('/dresses/:id', (req,res)=>{
 // Post new element in the index page
 app.post('/dresses',(req,res)=>{ //MongoServerError: bad auth : Authentication failed.
    // dresses.push(req.body)    // THAT MEANS wrong password or username  , something wrong
-   Dress.create(req.body,(err,createdDress)=>{
+   Product.create(req.body,(err,createdDress)=>{
     res.redirect('/dresses')
 })
   //  
 })
-//console.log(Dress)
+// shoping cart link 
 
+app.get('/cart/:id',(req,res)=>{
+    // query model to return all fruits
+ 
+    Product.findById(req.params.id,(err,allProducts)=>{
+ res.render('Cart',{product:allProducts})
+ })
+ })
 app.listen(port,()=>{
     console.log('listen to 3000')
 }) 

@@ -1,28 +1,27 @@
-const React =require('react')
- class Index extends React.Component {
+const React = require('react')
+const DefaultLayout = require('./layout/DefaultLayout')
+class Index extends React.Component {
 
-    render()
-    {
+    render() {
         const dresses = this.props.dresses
-        return(
-            <div>
+        return (
+           <DefaultLayout title="Index">
+           <div>
                 <nav>
-                    <a href ="/dresses/new">add new</a>
+                    <a href="/dresses/new">add new</a>
                 </nav>
-<h1> Products Index Page</h1>  
-<ul>
-    {
-        dresses.map(dress=>{
-            return (
-<li>
-     <a href={`/dresses/${dress._id}`}><img src={dress.imag} height="300" width="300"></img></a>
+                <ul>
+                    {
+                        dresses.map(dress => {
+                            return (
+                                <li k= {dress._id}>    <a href={`/dresses/${dress._id}`}><img src={dress.imag} height="300" width="300"></img></a></li>
 
-</li>
-            )
-        })
-    }</ul>       
-   </div>
+                            )
+                        })
+                    }</ul>
+            </div>
+            </DefaultLayout>
         )
- }
- }
- module.exports = Index 
+    }
+}
+module.exports = Index 

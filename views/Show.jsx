@@ -1,30 +1,24 @@
 const React = require('react')
+const DefaultLayout = require('./layout/DefaultLayout')
+
 class Show extends React.Component {
     render() {
         const dress = this.props.dress
         return (
-            <div>
-                <h1>Show  Page</h1>
-                <a href=""><h2>next </h2> </a>
-               <h3>{(` name : ${dress.name}`)} </h3>
-               <h3>{(`style: ${dress.style}`)}</h3>
-            <h3>{(`color : ${dress.color}`)}</h3>
+            <DefaultLayout title="Show Page">
+                <div>
+               
+               <h5>{(` name : ${dress.name}`)} </h5>
+               <h5>{(`style: ${dress.style}`)}</h5>
+            <h5>{(`color : ${dress.color}`)}</h5>
            
-            <h3>Count    { `${dress.count}`}</h3>
-
-            <img src={`${dress.imag}`}></img>
+            <h5>Count { `${dress.count}`}</h5>
+            <a href={'/cart'}><h2>Buy </h2> </a>
+            <img src={`${dress.imag }`} ></img>
             <button> <a href = {"/Dresses"}> Back to main product page </a>
             </button>
-                {/* { dress.map((elem,i)=>{
-                    return(
-                    <div>
-                        <h2>{(`Name  ${ elem.name } color ${elem.color}  style ${elem.style}` )}</h2>
-                      
-
-                    </div>
-                    )
-                })} */}
             </div>
+            </DefaultLayout>
         )
     }
 }

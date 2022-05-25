@@ -1,10 +1,12 @@
 const React = require('react')
+const DefaultLayout = require('./layout/DefaultLayout')
 
 module.exports = class New extends React.Component {
     render() {
         return (
+            <DefaultLayout title="Create new Dress">
+
             <>
-                <h1>Create new Dress</h1>
                 <form action="/dresses" method="POST">
                     <label htmlFor="name">name</label>
                     <input type="text" id="name" name="name" />
@@ -22,6 +24,7 @@ module.exports = class New extends React.Component {
 
             </>
 
+            </DefaultLayout>
 
         )
     }
