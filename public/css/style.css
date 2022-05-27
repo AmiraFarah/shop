@@ -1,0 +1,60 @@
+body{
+ padding:5px;
+    background-color:pink;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.img{
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 230px;
+    width :1000px;
+    height:600px;
+}
+img:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.btn{
+    
+
+    background: rgb(180, 149, 149);
+    color:white;
+    border-radius: 5px;
+    
+        
+}
+.div2{
+ display: flex;   
+}
+.input1{
+    background-color: rebeccapurple;
+    color:white;
+    border-radius: 5px;
+}
+.div1{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+
+
+}
+.main
+ {
+color:red;
+font-size: larger;
+}
+#form{
+    margin:2rem auto;
+    border :2px solid red;
+    padding:2rem;
+
+
+}
+.label{
+    color: yellow;
+}

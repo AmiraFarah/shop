@@ -4,10 +4,10 @@ const DefaultLayout = require('./layout/DefaultLayout')
 module.exports = class New extends React.Component {
     render() {
         return (
-            <DefaultLayout title="Create new Dress">
+            <DefaultLayout title="Create new Product">
 
             <>
-                <form action="/dresses" method="POST">
+                <form  id="form"action="/dresses" method="POST">
                     <label htmlFor="name">name</label>
                     <input type="text" id="name" name="name" />
 
@@ -21,7 +21,7 @@ module.exports = class New extends React.Component {
                     <input type="text" id="imag" name="imag" />
                     <input type="submit" />
                 </form>
-
+                    <button> <a href="/dresses"> Back to Index</a></button>
             </>
 
             </DefaultLayout>

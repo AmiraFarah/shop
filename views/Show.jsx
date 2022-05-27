@@ -6,18 +6,20 @@ class Show extends React.Component {
         const dress = this.props.dress
         return (
             <DefaultLayout title="Show Page">
-                <div>
-               
-               <h5>{(` name : ${dress.name}`)} </h5>
-               <h5>{(`style: ${dress.style}`)}</h5>
-            <h5>{(`color : ${dress.color}`)}</h5>
-           
-            <h5>Count { `${dress.count}`}</h5>
-            <a href={'/cart'}><h2>Buy </h2> </a>
-            <img src={`${dress.imag }`} ></img>
-            <button> <a href = {"/Dresses"}> Back to main product page </a>
-            </button>
-            </div>
+                <div >
+                    <h5>{(` Name ${dress.name}       Style  ${dress.style}  Color  ${dress.color}`)} </h5>
+                    <h5>Quantity {`${dress.count}`}</h5>
+                    <img src={`${dress.imag}`} height="400px" width="400" px ></img>
+                    <a href='/cart'><h2>Buy </h2> </a>
+
+                    <button> <a href={"/Dresses"}> Back to main product page </a>
+                    </button>
+                    <button><a href={`/dresses/${dress._id}/edit`}>Edit</a></button>
+                    <form action={`/dresses/${dress._id}?_method=DELETE`} method='POST'>
+                    <input class='input1' type="submit" value="DELETE" />
+
+                    </form>
+                </div>
             </DefaultLayout>
         )
     }
