@@ -10,4 +10,3 @@
 *put / api/v1/ dresses/:id     'update product'
 *post/ api/v1/ cart           'add a product to shopping cart'
 *Get/api/v1/dresses/:id/edit  'edit a product'
----
