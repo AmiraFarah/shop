@@ -47,7 +47,9 @@ app.get('/dresses',(req,res)=>{
 res.render('Index',{dresses:allDresses})
 })
 })
-
+app.get('/cart',(req,res)=>{
+    res.render('Shopping')
+})
 //New element 
 app.get('/dresses/new',(req,res)=>{
     res.render('New')
@@ -78,29 +80,24 @@ app.put('/dresses/:id',(req,res)=>{
 })
 // Create new element in the index page
 app.post('/dresses',(req,res)=>{ //MongoServerError: bad auth : Authentication failed.
-    // dresses.push(req.body)    // THAT MEANS wrong password or username  , something wrong
+    // dresses.push(req.body)    // THAT MEANS wrong password or username  , something wrong 
     Product.create(req.body,(err,createdDress)=>{
      res.redirect('/dresses')
  })
    //  
  })
 
+// route after adding a product to shopping cart
+
+//=======================================================
 // shoping cart route
 app.post('/cart',(req,res)=>{
-    Cart.create(req.body,(err,addToCart)=>{
-        res.render('Shopping')
+    Cart.create(products[req.body],(err,addToCart)=>{
+         console.log('??????',addToCart[req.body])
+        res.render('/cart',{products:products})
 
     })
 })
-
-// shoping cart link 
-
-// app.post('/shoppingCart',(req,res)=>{
-//     console.log('mammy')
-//      Cart.create(req,res,(err,addProduct)=>{
-//         res.render('Shopping',{addProduct})
-//      })
-// })
 
  // Edit
 

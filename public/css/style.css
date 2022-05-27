@@ -1,6 +1,6 @@
 body{
  padding:5px;
-    background-color:pink;
+    background-color:bisque;
     color: red;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -57,4 +57,11 @@ font-size: larger;
 }
 .label{
     color: yellow;
+}
+#pri{
+    background-color: red;
+    background-size:100%;
+    color:white;
+    font-size:initial;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

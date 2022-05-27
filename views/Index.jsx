@@ -16,6 +16,7 @@ class Index extends React.Component {
                                 return (
                                     <li  k={dress._id}>    <a href={`/dresses/${dress._id}`}><img  src={dress.imag} height="300" width="300"></img></a>
 
+                                       <h5 id='pri'>{dress.price}$</h5>
 
                                         <form action={`/dresses/${dress._id}?_method=DELETE`} method='POST'>
                                             <input class='input1' type="submit" value="DELETE" />

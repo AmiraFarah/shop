@@ -19,6 +19,9 @@ module.exports = class New extends React.Component {
                     <input type="count" id="count" name="count" />
                     <label htmlFor="imag">Image</label>
                     <input type="text" id="imag" name="imag" />
+                    <label htmlFor="price">Price</label>
+                    <input type="price" id="price" name="price" />
+
                     <input type="submit" />
                 </form>
                     <button> <a href="/dresses"> Back to Index</a></button>

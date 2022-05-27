@@ -7,14 +7,13 @@ class Shopping extends React.Component{
          arr.push(obj)
         return(
             <DefaultLayout title="Shopping Cart">
-
             <div >
                     <ul>
                         {
-                            arr.map(ele => {
+                            obj.map(product => {
                                 return (
                                     <li>  
-                                        <img  src={ele.imag}> </img>
+                                        <img  src={products[product]}> </img>
 
 
                                     </li>
