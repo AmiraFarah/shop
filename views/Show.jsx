@@ -9,11 +9,12 @@ class Show extends React.Component {
             <DefaultLayout title="Show Page">
                 <div >
                     <h5>{(` Name ${dress.name}       Style  ${dress.style}  Color  ${dress.color}`)} </h5>
-                    {(`${dress.count == 0}`) ? <h1>out off stock</h1> : <h1>Quantity `${dress.count}`</h1>}
+                   
+                    {dress.count == 0 ? <h1>out off stock</h1> : <h1>Quantity {dress.count}</h1>}
 
                     <img src={`${dress.imag}`} height="400px" width="400" px ></img>
                     <h5>{dress.price} $</h5>
-                    <a href='/cart'><h2>Buy </h2> </a>
+                    <button><a href={'/cart'}>buy</a></button>
 
                     <button> <a href={"/Dresses"}> Back to main product page </a>
                     </button>
