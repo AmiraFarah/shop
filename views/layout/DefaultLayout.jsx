@@ -10,6 +10,7 @@ class Default extends React.Component {
                     <title>{this.props.title}</title>
                 </head>
                 <body>
+                    <img id="prince" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu34nUrvLfahQYi0qsNGYU68VIkVl1F9aJaToB_a3D_osbhHhTWnmFEGEpgZeWyPrDRbI&usqp=CAU" height ="200" width="400"/>
                     <h1>
 
                             {this.props.title}

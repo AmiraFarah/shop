@@ -47,9 +47,7 @@ app.get('/dresses',(req,res)=>{
 res.render('Index',{dresses:allDresses})
 })
 })
-app.get('/cart',(req,res)=>{
-    res.render('Shopping')
-})
+
 //New element 
 app.get('/dresses/new',(req,res)=>{
     res.render('New')
@@ -89,15 +87,58 @@ app.post('/dresses',(req,res)=>{ //MongoServerError: bad auth : Authentication f
 
 // route after adding a product to shopping cart
 
+
 //=======================================================
 // shoping cart route
-app.post('/cart',(req,res)=>{
-    Cart.create(products[req.body],(err,addToCart)=>{
-         console.log('??????',addToCart[req.body])
-        res.render('/cart',{products:products})
+app.get('/dresses/:id/cart',(req,res)=>{
+    Cart.find({},(err,allItems)=>{
+            res.render('Shopping',{products:allItems})
+      
+})
+})
+app.put('/dresses/:id/cart',async (req,res)=>{
+const shopCart = await Cart.findById('62917536eeaee9bd53d7f84f')
+const item = await Product.findById(req.body.products)
+shopCart.products.push(item)
+console.log(item,'item')
+console.log(shopCart.products,'shop')
 
+
+Cart.findByIdAndUpdate('62917536eeaee9bd53d7f84f',{
+products:shopCart.products
+},{new:true},(err,updatedCart)=>{
+    // shopCart.save()
+    res.redirect('/dresses/62917536eeaee9bd53d7f84f/cart')
+})
+    // app.put('/products/:id/buy', async (req, res) => {
+    //     const foundProduct = await Product.findById(req.params.id)
+    //     // console.log(foundProduct.inventory)
+    //     Product.findByIdAndUpdate(req.params.id, {
+    //         inventory: foundProduct.inventory - 1
+    //     }, { new: true }, (err, updatedProduct) => {
+    
+    //         res.redirect(`/products/${req.params.id}`)
+    //     })
+    // })
+})
+
+app.post('/dresses/62917536eeaee9bd53d7f84f/cart',(req,res)=>{
+       Cart.create(req.body,(err,addToCart)=>{
+
+res.redirect('/dresses/62917536eeaee9bd53d7f84f/cart')
     })
 })
+
+
+//update route for cart
+// app.put('/cart',(req,res)=>{
+//     Cart.findOneAndUpdate({},req.body,{new:true},(err,updatedProduct)=>{
+//         if (!err){ res.status(200).redirect('/dresses')} 
+//         else {
+//             res.status(400).json(err)
+//         }
+//     })
+// })
 
  // Edit
 

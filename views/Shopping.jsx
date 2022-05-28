@@ -1,26 +1,34 @@
 const React = require('react')
 const DefaultLayout=require('./layout/DefaultLayout')
-const arr = []
+const mongoose = require('mongoose')
 class Shopping extends React.Component{
     render(){
-         const obj = this.props.obj
-         arr.push(obj)
+         const products = this.props.products
+         console.log(products,'ppppppp')
         return(
             <DefaultLayout title="Shopping Cart">
             <div >
                     <ul>
                         {
-                            obj.map(product => {
+                            products[0].products.map((product) => {
+                                console.log(product,'single product')
+                                let source= product.imag
+
                                 return (
-                                    <li>  
-                                        <img  src={products[product]}> </img>
+                                    <li> <p>
+                                       {`${product._id}`}
+                                    </p>
+                                    
+                
+
+                                        <img class="img"  src = {source}></img>
 
 
                                     </li>
                                 )
                             })
                         }</ul>
-                 {/* <img src={`${product.imag}`} height="200" width="200"></img> */}
+                  {/* <img src={`${product.imag}`} height="200" width="200"></img> */}
 
                  <button><a href={"/dresses"}>back</a></button>
             </div>

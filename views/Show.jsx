@@ -4,7 +4,6 @@ const DefaultLayout = require('./layout/DefaultLayout')
 class Show extends React.Component {
     render() {
         const dress = this.props.dress
-
         return (
             <DefaultLayout title="Show Page">
                 <div >
@@ -14,7 +13,12 @@ class Show extends React.Component {
 
                     <img src={`${dress.imag}`} height="400px" width="400" px ></img>
                     <h5>{dress.price} $</h5>
-                    <button><a href={'/cart'}>buy</a></button>
+                    <form action ='/dresses/62917536eeaee9bd53d7f84f/cart?_method=PUT'  method="POST">
+                   
+                    <input type="text" id="products" name="products" defaultValue={dress._id} />
+                    <input type="submit" value= "buy"/>
+
+                    </form>
 
                     <button> <a href={"/Dresses"}> Back to main product page </a>
                     </button>

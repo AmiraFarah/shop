@@ -5,10 +5,10 @@ class Index extends React.Component {
     render() {
         const dresses = this.props.dresses
         return (
-            <DefaultLayout  title="Index">
+            <DefaultLayout  title="INDEX">
                 <div >
                     <nav>
-                        <a class='main' href="/dresses/new">Add new</a>
+                        <a class='main' href="/dresses/new">ADD NEW</a>
                     </nav>
                     <ul class='div1'>
                         {

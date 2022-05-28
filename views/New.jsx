@@ -14,13 +14,13 @@ module.exports = class New extends React.Component {
                     <label htmlFor="color">Color</label>
                     <input type="text" id="color" name="color" />
                     <label htmlFor="style">Style</label>
-                    <input type="style" id="style" name="style" />
+                    <input type="text" id="style" name="style" />
                     <label htmlFor="count">Count</label>
-                    <input type="count" id="count" name="count" />
+                    <input type="text" id="count" name="count" />
                     <label htmlFor="imag">Image</label>
                     <input type="text" id="imag" name="imag" />
                     <label htmlFor="price">Price</label>
-                    <input type="price" id="price" name="price" />
+                    <input type="text" id="price" name="price" />
 
                     <input type="submit" />
                 </form>
