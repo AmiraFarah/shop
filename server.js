@@ -36,10 +36,11 @@ app.use((req,res,next)=>{
 
 // INDUCES Index, New, Delete, Update, Create, Edit, Show
 
-// Index
+// Index first page
 app.get('/',(req,res)=>{
     res.render('First')
 })
+// route shows all products
 app.get('/dresses',(req,res)=>{
    // query model to return all fruits
 
@@ -48,7 +49,7 @@ res.render('Index',{dresses:allDresses})
 })
 })
 
-//New element 
+// create New element 
 app.get('/dresses/new',(req,res)=>{
     res.render('New')
 })
@@ -67,7 +68,7 @@ app.delete('/dresses/:id',(req,res)=>{
     })
 })
 
-//update route
+//update route TO edit specific route 
 app.put('/dresses/:id',(req,res)=>{
     Product.findByIdAndUpdate(req.params.id,req.body,{new:true},(err,updatedProduct)=>{
         if (!err){ res.status(200).redirect('/dresses')} 

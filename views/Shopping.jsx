@@ -7,21 +7,21 @@ class Shopping extends React.Component{
          console.log(products,'ppppppp')
         return(
             <DefaultLayout title="Shopping Cart">
-            <div >
-                    <ul>
+            <div  >
+                    <ul >
                         {
                             products[0].products.map((product) => {
                                 console.log(product,'single product')
                                 let source= product.imag
 
                                 return (
-                                    <li> <p>
-                                       {`${product._id}`}
+                                    <li class="shopping"> <p>
+                                       {`${product.name}`}
                                     </p>
                                     
                 
 
-                                        <img class="img"  src = {source}></img>
+                                        <img class="img-shopping"  src = {source}></img>
 
 
                                     </li>

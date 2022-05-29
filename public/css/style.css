@@ -70,14 +70,30 @@ h4{
     color: white;
     border-radius: 5px;
 }
+.btn:hover{
+    background-color: darkseagreen;
+}
 .input1{
    margin-left: 20px;
-    color: blue;
+    color:white;
+    background-color: maroon;
     border-radius: 5px;
+}
+.input1:hover{
+    background-color: darkseagreen;
+}
+.back{
+    background-color:darkseagreen;
 }
 .input1:hover{
 
 }
+.add-new:hover{
+    color :maroon;
+}
+.main:hover{
+    color: black;
+    animation: alternate;}
 .image img{
     transition: 1s ease;
     }
@@ -88,3 +104,90 @@ h4{
     transform: scale(1.2);
     transition: 1s ease;
     }
+.outer{
+    display: flex;
+    justify-content: center;
+    justify-content:center;
+    justify-content: flex-start;
+}
+.inner-img{
+    color:white;
+    border-width: 410;
+    border-radius: 10px;
+    background-color: maroon;
+}
+.out .show-form{
+    padding-left: 50px;
+}
+.inner {
+    color: maroon;
+padding-left: 8px;
+}
+.star{
+    padding-left: 10px;
+ font-size: 12px;   
+}
+.star1{
+    font-size: 18px;
+    padding-top: 10px;
+
+}
+.form-div{
+    background-color:slategrey;
+    padding-left: 30px;
+    display: flex;
+    color:maroon;
+}
+.form{
+padding-left: 100px;
+    max-width: 50px;
+    margin: 2rem auto;
+    font-family: sans-serif;
+        
+    }
+.form.label{
+}
+.sub-button{
+    color:white;
+    background-color: maroon;
+    cursor: pointer;
+    
+}
+.sub-button:hover{
+    background-color:darkseagreen;
+}
+.img-edit{
+    background: gray;
+    border-radius: 20px;
+}
+.new-form{
+    
+    font: 1em sans-serif;
+max-width: 300px;
+margin: 2rem auto;
+border: 4px solid maroon;
+padding: 2rem;}
+.L{
+    display:block;
+    color: maroon;
+}
+.new-btn{
+    background-color: maroon;
+    color: white;
+    
+}
+.new-btn:hover{
+    background-color: darkseagreen;
+}
+.new-back-to-index{
+    color:maroon;
+    background-color: darkseagreen;
+margin-left:530px;
+}
+.new-back-to-index:hover{
+background-color: maroon;
+}
+.img-shopping{
+    width: 250px;
+    height: 250px;
+}

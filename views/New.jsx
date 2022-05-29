@@ -7,24 +7,24 @@ module.exports = class New extends React.Component {
             <DefaultLayout title="Create new Product">
 
             <>
-                <form  id="form"action="/dresses" method="POST">
-                    <label htmlFor="name">name</label>
+                <form class='new-form'  id="form"action="/dresses" method="POST">
+                    <label class='L' htmlFor="name">Name</label>
                     <input type="text" id="name" name="name" />
 
-                    <label htmlFor="color">Color</label>
+                    <label class='L' htmlFor="color">Color</label>
                     <input type="text" id="color" name="color" />
-                    <label htmlFor="style">Style</label>
+                    <label class='L' htmlFor="style">Style</label>
                     <input type="text" id="style" name="style" />
-                    <label htmlFor="count">Count</label>
+                    <label class='L' htmlFor="count">Count</label>
                     <input type="text" id="count" name="count" />
-                    <label htmlFor="imag">Image</label>
+                    <label class='L' htmlFor="imag">Image</label>
                     <input type="text" id="imag" name="imag" />
-                    <label htmlFor="price">Price</label>
+                    <label class='L' htmlFor="price">Price</label>
                     <input type="text" id="price" name="price" />
-
-                    <input type="submit" />
+<hr />
+                    <input class='new-btn'type="submit" />
                 </form>
-                    <button> <a href="/dresses"> Back to Index</a></button>
+                    <button class="new-back-to-index"> <a href="/dresses"> Back to Index</a></button>
             </>
 
             </DefaultLayout>
