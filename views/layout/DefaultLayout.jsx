@@ -7,7 +7,8 @@ class Default extends React.Component {
             <html>
                 <head>
                     <link rel="stylesheet" href="/css/style.css" />
-                    <title>{this.props.title}</title>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+                    <title class ="title1">{this.props.title}</title>
                 </head>
                 <body>
                     <img id="prince" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu34nUrvLfahQYi0qsNGYU68VIkVl1F9aJaToB_a3D_osbhHhTWnmFEGEpgZeWyPrDRbI&usqp=CAU" height ="200" width="400"/>
