@@ -13,8 +13,8 @@
 * Get/api/v1/dresses/:id/edit   'edit a product'
 ---
 ---
-i used React Express mongo DB to build my app 
-images uploaded to github
+* i used React Express mongo DB to build my app 
+* images uploaded to github
 ---
 
 Some issues need to solve
