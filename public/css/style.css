@@ -66,12 +66,12 @@ h4{
 }
 .btn{
     margin-left: 26px;
-    background: maroon;
+    background: darkseagreen;
     color: white;
     border-radius: 5px;
 }
 .btn:hover{
-    background-color: darkseagreen;
+    background-color: maroon;
 }
 .input1{
    margin-left: 20px;
@@ -83,7 +83,12 @@ h4{
     background-color: darkseagreen;
 }
 .back{
+    border-radius: 5px;
     background-color:darkseagreen;
+}
+.back:hover{
+    cursor: pointer;
+    background: maroon;
 }
 .input1:hover{
 
@@ -149,10 +154,13 @@ padding-left: 100px;
 }
 .sub-button{
     color:white;
-    background-color: maroon;
+    background-color: darkseagreen;
     cursor: pointer;
+    border-radius: 5px;
     
 }
+.sub-button:hover{
+    font-size:large;}
 .sub-button:hover{
     background-color:darkseagreen;
 }
@@ -205,4 +213,22 @@ font: white;
 }
 .place:hover{
     background-color: burlywood;
+}
+.buyButton{
+    cursor: pointer;
+    margin-left: 20px;
+    color:white;
+    background-color: maroon;
+    border-radius: 5px;
+
+}
+.buyButton:hover{
+    background-color: darkseagreen;
+    cursor: pointer;
+}
+.noBuyButton{
+    margin-left: 30px;
+    border-radius: 5px;
+pointer-events: none;
+background: gray;
 }
