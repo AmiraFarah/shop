@@ -16,10 +16,10 @@ screen shots
 ---
 index Page
 ---
-![index](images\index.png)
+![index](index.png)
 ---
 Edit Page
 ---
-![edit](images\edit.png)
+![edit](\edit.png)
 
 
