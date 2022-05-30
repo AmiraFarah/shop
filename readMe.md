@@ -17,8 +17,9 @@ screen shots
 index Page
 ---
 ![index](images\index.png)
+---
 Edit Page
 ---
-![](images\edit.png)
+![edit](images\edit.png)
 
 
