@@ -16,6 +16,6 @@ screen shots
 ---
 index page
 ---
-![my products](C:\Users\hanee\OneDrive\Desktop\perscholas\shop\images\index.png)
+![index](images\index.png)
 
 
