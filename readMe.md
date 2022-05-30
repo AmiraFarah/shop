@@ -12,6 +12,10 @@
   get/ api/v1/ dresses/:id/cart 'show shopping cart with order hisrtory '
 * Get/api/v1/dresses/:id/edit   'edit a product'
 ---
+---
+my shop needs to fix some issues  
+1. when i add product to my cart it does not decrease total products quantity 
+2. when i add same product to the cart it should increase the quantity by 1 and with only one image for the product 
 screen shots
 ---
 index Page
@@ -20,6 +24,15 @@ index Page
 ---
 Edit Page
 ---
+---
 ![edit](images/edit.png)
+---
+show page
+---
+![show](images/show.png)
+---
+cart
+---
+![cart](images/cart.png)
 
 
