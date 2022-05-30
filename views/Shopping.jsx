@@ -5,16 +5,15 @@ class Shopping extends React.Component{
     render(){
          const products = this.props.products
          let total = 0
-         console.log(products,'ppppppp')
+         let quant = 0
         return(
             <DefaultLayout title="Shopping Cart">
             <div  >
                     <ul >
                         {
-                            products[0].products.map((product) => {
-                                console.log(product,'single product')
+                            products[0].products.map((product,i) => {
                                 let source= product.imag
-
+                               
                                 return (
                                     <li class="shopping"> <p>
                                        {`${product.name}`}
@@ -29,8 +28,7 @@ class Shopping extends React.Component{
                                 )
                             })
                         }</ul>
-                  {/* <img src={`${product.imag}`} height="200" width="200"></img> */}
-<p>Order Total {`${total}$`}</p>
+                 <p> quantity ordered = {`${quant}`}Order Total {`${total}$`}</p>
                  <button class='place'><a href={"/dresses"}>Place your order</a></button>
             </div>
        </DefaultLayout>

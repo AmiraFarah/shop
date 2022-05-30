@@ -28,7 +28,7 @@ class Show extends React.Component {
                     <div class='show-form'>
                     <form action='/dresses/62917536eeaee9bd53d7f84f/cart?_method=PUT' method="POST">
 
-                        {/* <input class='input1' type="text" id="products" name="products" defaultValue={dress._id} /> */}
+                        <input class='input1' type="text" id="products" name="products" defaultValue={dress._id} />
                         <input class={dress.count > 0 ? "buyButton" : "noBuyButton"} type="submit" value="buy" />
 
                     </form>
