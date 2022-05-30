@@ -13,7 +13,11 @@
 * Get/api/v1/dresses/:id/edit   'edit a product'
 ---
 ---
-my shop needs to fix some issues  
+i used React Express mongo DB to build my app 
+images uploaded to github
+---
+
+Some issues need to solve
 1. when i add product to my cart it does not decrease total products quantity 
 2. when i add same product to the cart it should increase the quantity by 1 and with only one image for the product 
 screen shots
