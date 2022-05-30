@@ -9,12 +9,16 @@ class Show extends React.Component {
                 <div  class='out'>
                     <div class="outer">
                          <div class='inner'>
-                         <h5>{(` Name : ${dress.name}       Style :  ${dress.style}  Color :  ${dress.color}`)} &nbsp;&nbsp;</h5>
+                         <h5>{(` Name : ${dress.name} `)}</h5>      
+                         <h5>{(` Style : ${dress.style} `)}</h5>
 
                          {dress.count == 0 ? <h5>out off stock</h5> : <h5>Quantity {dress.count}</h5>}
                          </div>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
                          <div class='inner-img'>
-                         <img src={ ` ${dress.imag}`} height="400px" width="400" px ></img>
+                         <img src= { ` ${dress.imag}`} height="400px" width="400" px ></img>
                          <h5>{dress.price} $</h5>
                          <div class="star">
                                                  <i class ="fas fa-star"></i>
@@ -27,8 +31,8 @@ class Show extends React.Component {
                     </div>
                     <div class='show-form'>
                     <form action='/dresses/62917536eeaee9bd53d7f84f/cart?_method=PUT' method="POST">
-
-                        <input class='input1' type="text" id="products" name="products" defaultValue={dress._id} />
+                      
+                        <input class='inputt' type="text" id="products" name="products" defaultValue={dress._id} />
                         <input class={dress.count > 0 ? "buyButton" : "noBuyButton"} type="submit" value="buy" />
 
                     </form>

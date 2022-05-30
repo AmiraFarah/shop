@@ -12,7 +12,10 @@
   get/ api/v1/ dresses/:id/cart 'show shopping cart with order hisrtory '
 * Get/api/v1/dresses/:id/edit   'edit a product'
 ---
-links
+screen shots
 ---
+index page
+---
+![my products](C:\Users\hanee\OneDrive\Desktop\perscholas\shop\images\index.png)
 
 

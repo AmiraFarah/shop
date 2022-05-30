@@ -6,6 +6,7 @@ class First extends React.Component{
             <div class = 'div-First'>
             <DefaultLayout >
             <a href="/dresses"><img class="img" src="https://image.shutterstock.com/image-vector/memorial-day-sale-promotion-advertising-260nw-700023406.jpg"width="1000"height="400"  /></a>
+            <p class="sale">Sale 50% Off </p>
             </DefaultLayout>
             </div>
             )

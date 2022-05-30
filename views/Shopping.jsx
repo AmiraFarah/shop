@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 class Shopping extends React.Component{
     render(){
          const products = this.props.products
+         
          let total = 0
          let quant = 0
         return(

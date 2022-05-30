@@ -100,7 +100,9 @@ app.get('/dresses/:id/cart',(req,res)=>{
 app.put('/dresses/:id/cart',async (req,res)=>{
 const shopCart = await Cart.findById('62917536eeaee9bd53d7f84f')
 const item = await Product.findById(req.body.products)
+item.count-- //trying to decrease quantity and update the data base 
 shopCart.products.push(item)
+Product.findOneAndUpdate(item)
 
 
 Cart.findByIdAndUpdate('62917536eeaee9bd53d7f84f',{
