@@ -23,13 +23,13 @@ class Shopping extends React.Component{
                                     <p>{product.price}$</p>
 
                                      <p class='hid'>  {total=product.price+total}</p> 
-
+                                     <p class='hid'> {quant=quant+1} </p>
 
                                     </li>
                                 )
                             })
                         }</ul>
-                 <p> quantity ordered = {`${quant}`}Order Total {`${total}$`}</p>
+ <p class="org"> quantity ordered {`${quant}`}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Order Total {` ${total}$`}</p>
                  <button class='place'><a href={"/dresses"}>Place your order</a></button>
             </div>
        </DefaultLayout>
