@@ -101,6 +101,8 @@ app.put('/dresses/:id/cart',async (req,res)=>{
 const shopCart = await Cart.findById('62917536eeaee9bd53d7f84f')
 const item = await Product.findById(req.body.products)
 shopCart.products.push(item)
+Product.products.count-- 
+console.log(Product.Product,'INVENTORY') // after buying inventory will decrease by one 
 console.log(item,'item')
 console.log(shopCart.products,'shop')
 

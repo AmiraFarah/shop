@@ -190,4 +190,19 @@ background-color: maroon;
 .img-shopping{
     width: 250px;
     height: 250px;
+    border: 5px solid maroon;
+    border-radius: 3px;
+}
+.hid{
+    visibility: hidden;
+}
+.place{
+    background: darkseagreen;
+cursor: pointer;
+margin-left: 5px;
+border-radius: 3px;
+font: white;
+}
+.place:hover{
+    background-color: burlywood;
 }

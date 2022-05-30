@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 class Shopping extends React.Component{
     render(){
          const products = this.props.products
+         let total = 0
          console.log(products,'ppppppp')
         return(
             <DefaultLayout title="Shopping Cart">
@@ -17,11 +18,11 @@ class Shopping extends React.Component{
                                 return (
                                     <li class="shopping"> <p>
                                        {`${product.name}`}
-                                    </p>
-                                    
-                
 
-                                        <img class="img-shopping"  src = {source}></img>
+                                    </p> <img class="img-shopping"  src = {source}></img>
+                                    <p>{product.price}$</p>
+
+                                     <p class='hid'>  {total=product.price+total}</p> 
 
 
                                     </li>
@@ -29,8 +30,8 @@ class Shopping extends React.Component{
                             })
                         }</ul>
                   {/* <img src={`${product.imag}`} height="200" width="200"></img> */}
-
-                 <button><a href={"/dresses"}>back</a></button>
+<p>Order Total {`${total}$`}</p>
+                 <button class='place'><a href={"/dresses"}>Place your order</a></button>
             </div>
        </DefaultLayout>
         )
