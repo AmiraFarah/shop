@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const method = require('method-override')
 const app = express()
-const port = 2001
+const port = process.env.PORT || 2001 
 const Product = require('./models/Product')
 const mongoose = require('mongoose')
 const Cart = require('./models/Cart')
@@ -100,7 +100,7 @@ app.get('/dresses/:id/cart',(req,res)=>{
 app.put('/dresses/:id/cart',async (req,res)=>{
 const shopCart = await Cart.findById('62917536eeaee9bd53d7f84f')
 const item = await Product.findById(req.body.products)
-item.count-- //trying to decrease quantity and update the data base 
+item.count-- // to decrease quantity and update the data base 
 shopCart.products.push(item)
 Product.findOneAndUpdate(item)
 Cart.findByIdAndUpdate('62917536eeaee9bd53d7f84f',{
