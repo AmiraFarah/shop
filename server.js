@@ -86,8 +86,6 @@ app.post('/dresses',(req,res)=>{ //MongoServerError: bad auth : Authentication f
    //  
  })
 
-// route after adding a product to shopping cart
-
 
 //=======================================================
 // shoping cart route
@@ -97,30 +95,20 @@ app.get('/dresses/:id/cart',(req,res)=>{
       
 })
 })
+
+//========== add a product to specific shopping cart ==========
 app.put('/dresses/:id/cart',async (req,res)=>{
 const shopCart = await Cart.findById('62917536eeaee9bd53d7f84f')
 const item = await Product.findById(req.body.products)
 item.count-- //trying to decrease quantity and update the data base 
 shopCart.products.push(item)
 Product.findOneAndUpdate(item)
-
-
 Cart.findByIdAndUpdate('62917536eeaee9bd53d7f84f',{
 products:shopCart.products
 },{new:true},(err,updatedCart)=>{
-    // shopCart.save()
     res.redirect('/dresses/62917536eeaee9bd53d7f84f/cart')
 })
-    // app.put('/products/:id/buy', async (req, res) => {
-    //     const foundProduct = await Product.findById(req.params.id)
-    //     // console.log(foundProduct.inventory)
-    //     Product.findByIdAndUpdate(req.params.id, {
-    //         inventory: foundProduct.inventory - 1
-    //     }, { new: true }, (err, updatedProduct) => {
     
-    //         res.redirect(`/products/${req.params.id}`)
-    //     })
-    // })
 })
 
 app.post('/dresses/62917536eeaee9bd53d7f84f/cart',(req,res)=>{
@@ -143,6 +131,7 @@ res.redirect('/dresses/62917536eeaee9bd53d7f84f/cart')
 
  // Edit
 
+ // route to edit a specific product on edit page 
  app.get('/dresses/:id/edit',(req,res)=>{
      Product.findById(req.params.id,(err,foundProduct)=>{
          if(!err){res.render('Edit',{product:foundProduct})}
@@ -153,7 +142,7 @@ res.redirect('/dresses/62917536eeaee9bd53d7f84f/cart')
 
      })
  
- // Show the element details 
+ // Show the product  details 
 app.get('/dresses/:id', (req,res)=>{
     Product.findById(req.params.id,(err,foundDress)=>{
         res.render('Show',{dress:foundDress})
